@@ -50,7 +50,7 @@ public sealed class Plugin : BaseUnityPlugin
 		_enabled = Config.Bind(
 			section: "General", 
 			key: "Enabled", 
-			defaultValue: false, 
+			defaultValue: true, 
 			description: "Whether would the grab count auto-reset when plcc-timer restarts. ");
 
 		RegisterCommand();
