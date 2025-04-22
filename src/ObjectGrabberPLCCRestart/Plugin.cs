@@ -8,7 +8,7 @@ namespace ObjectGrabberPLCCRestart;
 
 [BepInPlugin(GUID, NAME, PluginInfo.PLUGIN_VERSION)]
 [BepInProcess("Human.exe")]
-[BepInDependency(OBJECT_GRABBER_GUID, "1.3.1")]
+[BepInDependency(OBJECT_GRABBER_GUID, ">= 1.3.1")]
 [BepInDependency(PLCC_TIMER_GUID, BepInDependency.DependencyFlags.SoftDependency)]
 public sealed class Plugin : BaseUnityPlugin
 {
@@ -61,7 +61,7 @@ public sealed class Plugin : BaseUnityPlugin
 	}
 
 	// implement with the state-machine approach since
-	// plcc timer does not implement timer restart in its own method for us to hook onto
+	// plcc timer does not implement timer restart in a seperate method for us to hook onto
 	void FixedUpdate() {
 		if (!_enabled.Value) return;
 		var prev = _timerRunning;
