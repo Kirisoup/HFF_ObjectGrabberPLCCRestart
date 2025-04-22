@@ -100,7 +100,7 @@ public sealed class Plugin : BaseUnityPlugin
 				"i" or "inspect" => (entry.Value, 
 					$"auto-reset is currently {(entry.Value ? "enabled" : "disabled")}. "),
 				"t" or "toggle" => (!entry.Value, 
-					$"toggled auto-reset {(entry.Value ? "on" : "off")}. "),
+					$"toggled auto-reset {(entry.Value ? "off" : "on")}. "),
 				"d" or "off" or "disable" => (false, "disabled auto-reset. "),
 				"e" or "on" or "enable" => (true, "enabled auto-reset. "),
 				_ => (entry.Value, 
