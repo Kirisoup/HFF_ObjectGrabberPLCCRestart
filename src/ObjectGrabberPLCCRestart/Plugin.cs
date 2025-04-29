@@ -8,7 +8,7 @@ namespace ObjectGrabberPLCCRestart;
 
 [BepInPlugin(GUID, NAME, PluginInfo.PLUGIN_VERSION)]
 [BepInProcess("Human.exe")]
-[BepInDependency(OBJECT_GRABBER_GUID, ">= 1.3.1")]
+[BepInDependency(OBJECT_GRABBER_GUID, "1.3.1")]
 [BepInDependency(PLCC_TIMER_GUID, BepInDependency.DependencyFlags.SoftDependency)]
 public sealed class Plugin : BaseUnityPlugin
 {
